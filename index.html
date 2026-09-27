@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eolia Shalbillah Gadis Suwandi (Jey) — Systems & Data-Driven Product Builder</title>
+  <meta name="description" content="Portfolio Eolia Shalbillah Gadis Suwandi (Jey) — Systems & Data-Driven Product Builder, AI-Assisted Developer." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config (harus setelah CDN script) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            navyneon: '#7dd3fc',
+            techblue: '#38bdf8',
+            cardbg: '#0f172a',
+            cardborder: '#1e293b',
+            darkbg: '#020617',
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-darkbg text-slate-300 font-sans antialiased min-h-screen selection:bg-techblue/30 selection:text-white overflow-x-hidden">
+
+  <!-- ================= BACKGROUND GRID ================= -->
+  <div
+    class="fixed inset-0 bg-[linear-gradient(to_right,#1f293712_1px,transparent_1px),linear-gradient(to_bottom,#1f293712_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Ambient glow orbs -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-techblue/5 rounded-full blur-[120px] pointer-events-none z-0" aria-hidden="true"></div>
+  <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-navyneon/5 rounded-full blur-[120px] pointer-events-none z-0" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR (floating) ================= -->
+  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-slate-950/70 backdrop-blur-md border border-slate-800/80 opacity-0 transition-opacity duration-500">
+    <ul class="flex items-center gap-1 text-xs font-mono">
+      <li><a href="#hero" class="nav-link px-3 py-1.5 rounded-full text-slate-400 hover:text-white transition-colors">// home</a></li>
+      <li><a href="#project" class="nav-link px-3 py-1.5 rounded-full text-slate-400 hover:text-white transition-colors">// project</a></li>
+      <li><a href="#skills" class="nav-link px-3 py-1.5 rounded-full text-slate-400 hover:text-white transition-colors">// skills</a></li>
+      <li><a href="#experience" class="nav-link px-3 py-1.5 rounded-full text-slate-400 hover:text-white transition-colors">// exp</a></li>
+      <li><a href="#contact" class="nav-link px-3 py-1.5 rounded-full text-techblue hover:text-white transition-colors">// contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 relative z-10 space-y-24">
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="space-y-6 pt-8 md:pt-12">
+      <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-navyneon font-mono">
+        <span class="w-2 h-2 rounded-full bg-techblue animate-pulse"></span>
+        Available for Projects & Opportunities
+      </div>
+
+      <div class="reveal space-y-2" data-delay="100">
+        <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+          Eolia Shalbillah Gadis Suwandi
+        </h1>
+        <p class="text-lg md:text-xl text-navyneon font-medium">
+          Systems &amp; Data-Driven Product Builder
+          <span class="text-slate-600">|</span>
+          AI-Assisted Developer
+        </p>
+      </div>
+
+      <p class="reveal text-slate-400 text-lg leading-relaxed max-w-2xl" data-delay="200">
+        <strong class="text-white">Create with Purpose:</strong>
+        Transforming complex problems and raw data into functional, high-impact digital
+        solutions through structured thinking and modern tech.
+      </p>
+
+      <div class="reveal flex flex-wrap gap-4 pt-2" data-delay="300">
+        <a
+          href="#contact"
+          class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-700 hover:border-techblue text-white font-medium text-sm transition-all duration-300 neon-glow flex items-center gap-2"
+        >
+          Let's Connect
+          <svg class="w-4 h-4 text-techblue transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+        <a
+          href="#project"
+          class="px-6 py-3 rounded-lg bg-transparent border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white font-medium text-sm transition-all"
+        >
+          View Case Study
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="reveal p-6 md:p-8 rounded-2xl bg-cardbg/50 border border-cardborder backdrop-blur-sm space-y-4">
+      <h2 class="text-xs font-mono tracking-widest text-navyneon uppercase">
+        // Approach &amp; Philosophy
+      </h2>
+      <p class="text-slate-300 leading-relaxed">
+        Saya berfokus pada
+        <span class="text-white font-semibold">pemecahan masalah berbasis logika sistem dan data</span>.
+        Keunggulan utama saya terletak pada <i>critical thinking</i>—kemampuan membedah alur
+        manual yang kompleks menjadi komponen terstruktur, lalu mengeksekusinya menjadi produk
+        digital. Dengan pendekatan <i>AI-assisted development</i> dan <i>prompt engineering</i>
+        yang presisi, saya mampu menjembatani logika bisnis, kebutuhan pengguna, dan efisiensi
+        teknologi secara akurat.
+      </p>
+    </section>
+
+    <!-- ================= FEATURED PROJECT ================= -->
+    <section id="project" class="space-y-6 reveal">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xs font-mono tracking-widest text-navyneon uppercase">
+          // Featured Case Study
+        </h2>
+        <span class="text-xs text-slate-500 font-mono">Government Tech / Digitization</span>
+      </div>
+
+      <div class="p-6 md:p-8 rounded-2xl bg-cardbg border border-cardborder hover:border-slate-700 transition-all duration-300 space-y-6 relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-techblue/5 rounded-full blur-3xl group-hover:bg-techblue/10 transition-all"></div>
+
+        <div class="space-y-2 relative">
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
+            <span>Dinas PUPR Provinsi Banten</span>
+            <span>•</span>
+            <span>5 Months Scope</span>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-techblue transition-colors">
+            Sistem Informasi &amp; Manajemen Layanan Pengujian Bahan Pembangunan
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 text-sm relative">
+          <div class="space-y-2">
+            <h4 class="font-semibold text-xs uppercase font-mono text-slate-400">
+              The Problem
+            </h4>
+            <p class="text-slate-400 leading-relaxed">
+              Proses pengajuan pengujian bahan sebelumnya bersifat manual (tulis tangan &amp;
+              tatap muka). Pemohon dari daerah jauh harus datang langsung ke lokasi kantor
+              UPTD hanya untuk menyerahkan berkas.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold text-xs uppercase font-mono text-slate-400">
+              The Solution
+            </h4>
+            <p class="text-slate-400 leading-relaxed">
+              Merancang &amp; mengimplementasikan sistem informasi berbasis web end-to-end.
+              Pemohon kini dapat mendaftar dan memantau status pengujian secara online dari
+              mana saja.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feedback Quote -->
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-sm space-y-1 relative">
+          <div class="flex items-center gap-2 text-techblue font-medium text-xs">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+            </svg>
+            Meeting Feedback / Stakeholder Review
+          </div>
+          <p class="text-slate-300 italic">
+            "Alur sistemnya sudah sangat lengkap dan sesuai dengan apa yang dibutuhkan untuk
+            operasional UPTD."
+          </p>
+          <p class="text-xs text-slate-500 font-mono pt-1">
+            — Supervisor / Client Team UPTD Banten
+          </p>
+        </div>
+
+        <!-- Tech Badges -->
+        <div class="flex flex-wrap gap-2 pt-2 relative">
+          <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Express.js</span>
+          <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">EJS Templates</span>
+          <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">System Architecture</span>
+          <span class="px-2.5 py-1 rounded bg-slate-900 text-slate-300 text-xs font-mono border border-slate-800">Data Visualization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="space-y-6 reveal">
+      <h2 class="text-xs font-mono tracking-widest text-navyneon uppercase">
+        // Capabilities &amp; Workflow
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="skill-card p-5 rounded-xl bg-cardbg/30 border border-cardborder space-y-2">
+          <h3 class="text-white font-medium text-sm flex items-center gap-2">
+            <span class="text-techblue font-mono">01.</span> System Thinking &amp; Logic
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Mampu menguraikan alur kerja rumit menjadi modul-modul sistem terstruktur yang
+            mudah dipahami dan dikembangkan.
+          </p>
+        </div>
+
+        <div class="skill-card p-5 rounded-xl bg-cardbg/30 border border-cardborder space-y-2">
+          <h3 class="text-white font-medium text-sm flex items-center gap-2">
+            <span class="text-techblue font-mono">02.</span> Data Presentation
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Senang mengolah dan memvisualisasikan data agar menarik, mudah dibaca, dan siap
+            dipresentasikan untuk pengambilan keputusan.
+          </p>
+        </div>
+
+        <div class="skill-card p-5 rounded-xl bg-cardbg/30 border border-cardborder space-y-2">
+          <h3 class="text-white font-medium text-sm flex items-center gap-2">
+            <span class="text-techblue font-mono">03.</span> AI-Assisted Development
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Penguasaan <i>prompt engineering</i> untuk pemecahan masalah, debugging, dan
+            akselerasi penulisan kode Front-End &amp; Back-End.
+          </p>
+        </div>
+
+        <div class="skill-card p-5 rounded-xl bg-cardbg/30 border border-cardborder space-y-2">
+          <h3 class="text-white font-medium text-sm flex items-center gap-2">
+            <span class="text-techblue font-mono">04.</span> Team Leadership
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Terbiasa memimpin tim proyek (Ketua Kelompok &amp; Lead Magang) dalam mengarahkan
+            eksekusi dari awal hingga penyerahan hasil.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="pt-4 border-t border-slate-800/60 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-400 font-mono">
+        <span class="text-slate-500 uppercase">Tools &amp; Environment:</span>
+        <span class="tool-pill">VS Code</span>
+        <span class="tool-pill">Figma</span>
+        <span class="tool-pill">Photoshop</span>
+        <span class="tool-pill">Blender</span>
+        <span class="tool-pill">Unity</span>
+        <span class="tool-pill">Canva</span>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="space-y-6 reveal">
+      <h2 class="text-xs font-mono tracking-widest text-navyneon uppercase">// Experience</h2>
+
+      <div class="p-6 rounded-xl bg-cardbg/20 border border-cardborder space-y-3 hover:border-slate-700 transition-all">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-1">
+          <h3 class="text-white font-semibold text-base">
+            Lead System Developer (Internship)
+          </h3>
+          <span class="text-xs text-slate-500 font-mono">
+            1 Month On-site (5 Months Dev)
+          </span>
+        </div>
+        <p class="text-xs text-navyneon font-mono">
+          UPTD Pengujian Bahan Konstruksi Bangunan — Dinas PUPR Banten
+        </p>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Memimpin analisis kebutuhan sistem instansi, merancang alur data dari manual ke
+          online, serta mengeksekusi pembuatan aplikasi web menggunakan Express.js dan EJS.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section
+      id="contact"
+      class="reveal p-8 md:p-12 rounded-2xl bg-gradient-to-b from-cardbg to-slate-950 border border-cardborder text-center space-y-6"
+    >
+      <div class="space-y-2 max-w-md mx-auto">
+        <h2 class="text-2xl font-bold text-white">Let's Work Together</h2>
+        <p class="text-xs text-slate-400">
+          Have a complex system to build or data to present? Let's discuss how we can create
+          something purposeful.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="mailto:eoliasuwandi@gmail.com"
+          class="px-6 py-3 rounded-lg bg-techblue text-darkbg font-semibold text-sm hover:bg-sky-300 transition-all"
+        >
+          Send Email
+        </a>
+        <a
+          href="https://linkedin.com/in/eolia-shalbillah-gadis"
+          target="_blank"
+          rel="noopener"
+          class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-sm transition-all"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/seal165"
+          target="_blank"
+          rel="noopener"
+          class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-sm transition-all"
+        >
+          GitHub
+        </a>
+      </div>
+
+      <p class="text-[10px] text-slate-600 font-mono pt-6">
+        © Eolia Shalbillah Gadis Suwandi. Built with purpose &amp; clean logic.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Back to top -->
+  <button
+    id="backToTop"
+    aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-slate-900 border border-slate-800 hover:border-techblue text-techblue opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Custom JS -->
+  <script src="script/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* =====================================================
+   PORTFOLIO — EOLIA SHALBILLAH GADIS SUWANDI (JEY)
+   Custom styles (di luar utility Tailwind)
+   ===================================================== */
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Custom Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 8px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ---------- Neon glow untuk tombol utama ---------- */
+.neon-glow {
+  position: relative;
+  box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+}
+.neon-glow:hover {
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.35),
+    0 0 32px rgba(56, 189, 248, 0.18),
+    inset 0 0 12px rgba(56, 189, 248, 0.08);
+}
+.neon-glow:hover svg {
+  transform: translateX(3px);
+}
+.neon-glow svg {
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Reveal on scroll (default state) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Skill cards hover ---------- */
+.skill-card {
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.skill-card:hover {
+  border-color: #334155;
+  background-color: rgba(15, 23, 42, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ---------- Tool pill ---------- */
+.tool-pill {
+  transition: color 0.2s ease;
+  cursor: default;
+}
+.tool-pill:hover {
+  color: #38bdf8;
+}
+
+/* ---------- Navbar active link ---------- */
+.nav-link.is-active {
+  color: #ffffff;
+  background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* ---------- Back to top (visible state) ---------- */
+#backToTop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .neon-glow,
+  .skill-card,
+  .tool-pill {
+    transition: none;
+  }
+}
